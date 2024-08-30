@@ -97,13 +97,13 @@
 	    <repository>
 	      <id>nexus</id>
 	      <name>Mithun Technologies Releases Nexus Repository</name>
-	      <url>http://172.31.28.229:8081/repository/systima-release/</url>
+	      <url>http://172.31.2.220:8081/repository/devops-release/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
 	      <name>Mithun Technologies Snapshot Nexus Repository </name>
-	      <url>http://172.31.28.229:8081/repository/systima-snapshot/</url>
+	      <url>http://172.31.2.220:8081/repository/devops-snapshot/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
