@@ -1,0 +1,16 @@
+node
+{
+    def mavenHome = tool name:'maven'
+    
+    stage('checkoutstage')
+    {
+    git branch: 'development', credentialsId: '91bd4dd9-8e32-4182-a45a-efb7c9f7eb9b', url: 'https://github.com/IBM-batch/maven-web-application.git'
+    }
+    stage('buildstage'){
+        sh "${mavenHome}/bin/mvn clean package"
+    }
+    stage('sonarqube')
+    {
+      sh "${mavenHome}/bin/mvn sonar:sonar"  
+    }
+}
