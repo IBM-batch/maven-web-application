@@ -96,7 +96,7 @@
 	
 	    <repository>
 	      <id>nexus</id>
-	      <name>Mithun Technologies Releases Nexus Repository</name>
+	      <name>Cloudtechnologies pvt ltd</name>
 	      <url>http://172.31.42.34:8081/repository/IBM-release/</url>
 	    </repository>
 	    
