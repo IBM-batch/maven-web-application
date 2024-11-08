@@ -1,6 +1,7 @@
 node
 {
 def mavenHome = tool name:'Maven'
+properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '5', numToKeepStr: '3')), pipelineTriggers([pollSCM('* * * * *')])])
     
     stage('checkoutstage'){
     git credentialsId: '3c5c6161-2adb-43ed-88e5-5323e5cb8e99', url: 'https://github.com/IBM-batch/maven-web-application.git'    
