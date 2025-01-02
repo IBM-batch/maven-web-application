@@ -97,13 +97,13 @@
 	    <repository>
 	      <id>nexus</id>
 	      <name>Cloudtechnologies pvt ltd</name>
-	      <url>http://13.233.159.237:8081/repository/devops12-release/</url>
+	      <url>http://172.31.4.69:8081/repository/devops12-release/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
 	      <name>Mithun Technologies Snapshot Nexus Repository </name>
-	      <url>http://13.233.159.237:8081/repository/devops12-snapshot/</url>
+	      <url>http://172.31.4.69:8081/repository/devops12-snapshot/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
