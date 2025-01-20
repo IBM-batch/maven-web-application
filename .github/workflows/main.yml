@@ -1,0 +1,37 @@
+name: CI on Self-Hosted Runner
+
+# Trigger the workflow on any push to the main branch or on manual dispatch
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+# Define the jobs
+jobs:
+  build-and-test:
+    name: Build and Test on Self-Hosted Runner
+    runs-on: self-hosted  # Use the self-hosted runner label
+    # You can specify additional labels if your runner has them, e.g., self-hosted, linux, ubuntu
+    # runs-on: [self-hosted, linux]
+
+    steps:
+      # Step 1: Checkout the code
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      # Step 2: Run a basic script to test the runner
+      - name: Print Runner Info
+        run: |
+          echo "Running on self-hosted Linux runner"
+          uname -a
+
+      # Step 3: Run a multi-line script
+      - name: Build and Test Application
+        run: |
+          echo "Starting the build process..."
+          echo "Building application"
+          sleep 2
+          echo "Build completed!"
+          echo "Starting tests..."
+          sleep 2
+          echo "All tests passed!"
